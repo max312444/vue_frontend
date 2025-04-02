@@ -59,31 +59,70 @@
   defineExpose({ fetchPhotos })
   </script>
   
-  <style scoped>
-  .right-panel {
-    width: 25%;
-    padding: 20px;
-    background: #f9f9f9;
-  }
-  
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .photo-item {
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  
-  img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    cursor: pointer;
-    border: 1px solid #ccc;
-  }
-  </style>
+<style scoped>
+.right-panel {
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.photo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 12px;
+  transition: box-shadow 0.2s ease;
+}
+.photo-item:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.photo-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+.photo-item img:hover {
+  transform: scale(1.05);
+}
+
+.photo-item button {
+  background-color: #dc3545;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.photo-item button:hover {
+  background-color: #c82333;
+}
+
+</style>
   

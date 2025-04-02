@@ -4,12 +4,6 @@
     <!-- 상단 사진: 초기 회원 사진 + 선택된 사진 -->
     <div class="photo-top-row">
       <div class="photo-box">
-        <h3>초기 회원 사진</h3>
-        <img v-if="initialPhoto" :src="initialPhoto" class="photo-preview" />
-        <p v-else>사진이 없습니다.</p>
-      </div>
-
-      <div class="photo-box">
         <h3>선택한 사진</h3>
         <img
           v-if="selectedPhoto"
